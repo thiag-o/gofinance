@@ -23,6 +23,7 @@ export default function App() {
     SplashScreen.preventAutoHideAsync();
     return null;
   }
+
   SplashScreen.hideAsync();
   if (fontsLoaded) {
     return (
