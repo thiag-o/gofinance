@@ -3,8 +3,7 @@
     "name": "gofinance",
     "slug": "gofinance",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "plugins": ["expo-font"]
   }
 }
