@@ -10,7 +10,9 @@ import {
   UserName,
   UserWrapper,
   Icon,
+  HighLightCards,
 } from './styles';
+import { HighLightCard } from '../../components/HighLightCard';
 
 export function Dashboard() {
   return (
@@ -27,6 +29,15 @@ export function Dashboard() {
           <Icon name="power" />
         </UserWrapper>
       </Header>
+      <HighLightCards
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingLeft: 24 }}
+      >
+        <HighLightCard />
+        <HighLightCard />
+        <HighLightCard />
+      </HighLightCards>
     </Container>
   );
 }
