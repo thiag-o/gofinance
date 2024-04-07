@@ -1,18 +1,19 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import React from "react";
+import { ThemeProvider } from "styled-components";
 
 import {
   useFonts,
   Poppins_400Regular,
   Poppins_500Medium,
   Poppins_700Bold,
-} from '@expo-google-fonts/poppins';
-import * as SplashScreen from 'expo-splash-screen';
+} from "@expo-google-fonts/poppins";
+import * as SplashScreen from "expo-splash-screen";
 
-import theme from './src/global/styles/theme';
-import { Dashboard } from './src/screens/Dashboard';
-import { Register } from './src/screens/Register';
-import { CategorySelect } from './src/screens/CategorySelect';
+import { NavigationContainer } from "@react-navigation/native";
+
+import { Register } from "./src/screens/Register";
+import theme from "./src/global/styles/theme";
+import { AppRoutes } from "./src/routes/app.routes";
 
 export default function App() {
   const [fontsLoaded, fontsError] = useFonts({
@@ -30,7 +31,9 @@ export default function App() {
   if (fontsLoaded) {
     return (
       <ThemeProvider theme={theme}>
-        <Register />
+        <NavigationContainer>
+          <AppRoutes />
+        </NavigationContainer>
       </ThemeProvider>
     );
   }
