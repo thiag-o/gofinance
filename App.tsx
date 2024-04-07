@@ -30,7 +30,7 @@ export default function App() {
   if (fontsLoaded) {
     return (
       <ThemeProvider theme={theme}>
-        <CategorySelect />
+        <Register />
       </ThemeProvider>
     );
   }
