@@ -4,6 +4,7 @@ import { Container, Header, Title, Form, Fields, TransactionTypes } from './styl
 import { Input } from '../../components/Forms/Input';
 import { Button } from '../../components/Forms/Button';
 import { TransactionTypeButton } from '../../components/Forms/TransactionTypeButton';
+import { CategorySelect } from '../../components/Forms/CategorySelect';
 export function Register() {
   const [transactionType, setTransactionType] = useState('');
   function handleTransactionsTypeSelect(type: 'up' | 'down') {
@@ -33,6 +34,7 @@ export function Register() {
               isActive={transactionType === 'down'}
             />
           </TransactionTypes>
+          <CategorySelect title="Categoria" />
         </Fields>
         <Button title="Enviar" />
       </Form>
