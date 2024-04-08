@@ -1,7 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { HighLightCard } from '../../components/HighLightCard';
-import { TransactionCard, TransactionCardProps } from '../../components/TransactionCard';
+import { HighLightCard } from "../../components/HighLightCard";
+import {
+  TransactionCard,
+  TransactionCardProps,
+} from "../../components/TransactionCard";
 
 import {
   Container,
@@ -17,7 +20,7 @@ import {
   Transactions,
   Title,
   TransactionList,
-} from './styles';
+} from "./styles";
 
 export interface DataListProps extends TransactionCardProps {
   id: string;
@@ -26,28 +29,28 @@ export interface DataListProps extends TransactionCardProps {
 export function Dashboard() {
   const data: DataListProps[] = [
     {
-      id: '1',
-      type: 'positive',
-      title: 'Desenvolvimento de site',
-      amount: 'R$ 12.000,00',
-      category: { name: 'Vendas', icon: 'dollar-sign' },
-      date: '13/04/2022',
+      id: "1",
+      type: "positive",
+      title: "Desenvolvimento de site",
+      amount: "R$ 12.000,00",
+      category: { name: "Vendas", icon: "dollar-sign" },
+      date: "13/04/2022",
     },
     {
-      id: '2',
-      type: 'negative',
-      title: 'Hamburgueria Pizza',
-      amount: 'R$ 59,00',
-      category: { name: 'Alimentaçao', icon: 'coffee' },
-      date: '10/04/2022',
+      id: "2",
+      type: "negative",
+      title: "Hamburgueria Pizza",
+      amount: "R$ 59,00",
+      category: { name: "Alimentaçao", icon: "coffee" },
+      date: "10/04/2022",
     },
     {
-      id: '3',
-      type: 'negative',
-      title: 'Aluguel do apartamento',
-      amount: 'R$ 1.200,00',
-      category: { name: 'Casa', icon: 'shopping-bag' },
-      date: '10/04/2022',
+      id: "3",
+      type: "negative",
+      title: "Aluguel do apartamento",
+      amount: "R$ 1.200,00",
+      category: { name: "Casa", icon: "shopping-bag" },
+      date: "10/04/2022",
     },
   ];
 
@@ -56,7 +59,11 @@ export function Dashboard() {
       <Header>
         <UserWrapper>
           <UserInfo>
-            <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/77461960?v=4' }} />
+            <Photo
+              source={{
+                uri: "https://avatars.githubusercontent.com/u/77461960?v=4",
+              }}
+            />
             <User>
               <UserGreeting>Olá, </UserGreeting>
               <UserName>Thiago</UserName>
