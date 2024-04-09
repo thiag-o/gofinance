@@ -14,6 +14,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { Register } from "./src/screens/Register";
 import theme from "./src/global/styles/theme";
 import { AppRoutes } from "./src/routes/app.routes";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
   const [fontsLoaded, fontsError] = useFonts({
@@ -30,11 +31,13 @@ export default function App() {
   SplashScreen.hideAsync();
   if (fontsLoaded) {
     return (
-      <ThemeProvider theme={theme}>
-        <NavigationContainer>
-          <AppRoutes />
-        </NavigationContainer>
-      </ThemeProvider>
+      <GestureHandlerRootView>
+        <ThemeProvider theme={theme}>
+          <NavigationContainer>
+            <AppRoutes />
+          </NavigationContainer>
+        </ThemeProvider>
+      </GestureHandlerRootView>
     );
   }
 }
