@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
+
+import { useFocusEffect } from "@react-navigation/native";
 
 import { HighLightCard } from "../../components/HighLightCard";
 import {
@@ -64,6 +66,13 @@ export function Dashboard() {
   useEffect(() => {
     loadTransactions();
   }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      // AsyncStorage.removeItem("@gofinances:transactions");
+      loadTransactions();
+    }, [])
+  );
 
   return (
     <Container>

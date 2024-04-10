@@ -13,7 +13,7 @@ import { Feather } from "@expo/vector-icons";
 import { categories } from "../../utils/categories";
 
 export interface TransactionCardProps {
-  type: "up" | "down";
+  type: "positive" | "negative";
   name: string;
   amount: string;
   category: string;
@@ -31,7 +31,7 @@ export function TransactionCard({ data }: Props) {
     <Container>
       <Title>{data.name}</Title>
       <Amount type={data.type}>
-        {data.type === "down" && "- "}
+        {data.type === "negative" && "- "}
         {data.amount}
       </Amount>
       <Footer>
