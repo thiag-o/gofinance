@@ -34,6 +34,8 @@ export interface DataListProps extends TransactionCardProps {
 
 interface HighLightProps {
   amount: string;
+
+  lastTransaction: string;
 }
 interface HighLightData {
   entries: HighLightProps;
@@ -41,6 +43,24 @@ interface HighLightData {
   total: HighLightProps;
 }
 
+function getLastTransactionDate(
+  collection: DataListProps[],
+  type: "positive" | "negative"
+) {
+  const lastTransaction = new Date(
+    Math.max.apply(
+      Math,
+      collection
+        .filter((transaction) => transaction.type === type)
+        .map((transaction) => new Date(transaction.date).getTime())
+    )
+  );
+
+  return `${lastTransaction.getDate()} de ${lastTransaction.toLocaleString(
+    "pt-BR",
+    { month: "long" }
+  )}`;
+}
 export function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -90,27 +110,41 @@ export function Dashboard() {
       }
     );
 
+    setTransactions(transactionsFromatted);
+
+    const lastTransactionEntries = getLastTransactionDate(
+      transactions,
+      "positive"
+    );
+    const lastTransactionExpensives = getLastTransactionDate(
+      transactions,
+      "negative"
+    );
+    const totalInterval = `01 a ${lastTransactionExpensives}`;
+
     const total = entriesTotal - expensiveTotal;
 
-    setTransactions(transactionsFromatted);
     setHighLightData({
       entries: {
         amount: entriesTotal.toLocaleString("pt-BR", {
           style: "currency",
           currency: "BRL",
         }),
+        lastTransaction: `Última entrada dia ${lastTransactionEntries}`,
       },
       expensives: {
         amount: expensiveTotal.toLocaleString("pt-BR", {
           style: "currency",
           currency: "BRL",
         }),
+        lastTransaction: `Última entrada saída ${lastTransactionExpensives}`,
       },
       total: {
         amount: total.toLocaleString("pt-BR", {
           style: "currency",
           currency: "BRL",
         }),
+        lastTransaction: totalInterval,
       },
     });
 
@@ -158,20 +192,20 @@ export function Dashboard() {
             <HighLightCard
               type="up"
               title="Entradas"
-              amount={highLightData?.entries?.amount ?? 0}
-              lastTransaction="Última entrada dia 13 de abril"
+              amount={highLightData.entries.amount}
+              lastTransaction={highLightData.entries.lastTransaction}
             />
             <HighLightCard
               type="down"
               title="Saídas"
-              amount={highLightData?.expensives?.amount ?? 0}
-              lastTransaction="Última saída dia 03 de abril"
+              amount={highLightData.expensives.amount}
+              lastTransaction={highLightData.expensives.lastTransaction}
             />
             <HighLightCard
               type="total"
               title="Total"
-              amount={highLightData?.total?.amount ?? 0}
-              lastTransaction="01 à 16 de abril"
+              amount={highLightData.total.amount}
+              lastTransaction={highLightData.total.lastTransaction}
             />
           </HighLightCards>
 
