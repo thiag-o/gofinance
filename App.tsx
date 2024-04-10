@@ -31,7 +31,7 @@ export default function App() {
   SplashScreen.hideAsync();
   if (fontsLoaded) {
     return (
-      <GestureHandlerRootView>
+      <GestureHandlerRootView style={{ flex: 1 }}>
         <ThemeProvider theme={theme}>
           <NavigationContainer>
             <AppRoutes />
