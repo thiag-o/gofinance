@@ -6,6 +6,7 @@ import { useTheme } from "styled-components/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Dashboard } from "../screens/Dashboard";
 import { Register } from "../screens/Register";
+import { Resume } from "../screens/Resume";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -51,7 +52,7 @@ export function AppRoutes() {
             <MaterialIcons name="pie-chart" size={size} color={color} />
           ),
         }}
-        component={Register}
+        component={Resume}
       />
     </Navigator>
   );
