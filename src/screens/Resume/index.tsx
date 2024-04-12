@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { VictoryPie } from "victory-native";
 import { RFValue } from "react-native-responsive-fontsize";
@@ -8,6 +8,7 @@ import { addMonths, subMonths, format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
 import { useTheme } from "styled-components/native";
+import { useFocusEffect } from "@react-navigation/native";
 
 import {
   ChartContainer,
@@ -108,9 +109,11 @@ export function Resume() {
     setTotalByCategories(totalByCategory);
   }
 
-  useEffect(() => {
-    loadData();
-  }, [selectedDate]);
+  useFocusEffect(
+    useCallback(() => {
+      loadData();
+    }, [])
+  );
 
   return (
     <Container>
