@@ -13,7 +13,7 @@ import * as SplashScreen from "expo-splash-screen";
 
 import { NavigationContainer } from "@react-navigation/native";
 
-import { Register } from "./src/screens/Register";
+import { SignIn } from "./src/screens/SignIn";
 import theme from "./src/global/styles/theme";
 import { AppRoutes } from "./src/routes/app.routes";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -38,7 +38,7 @@ export default function App() {
         <ThemeProvider theme={theme}>
           <NavigationContainer>
             <StatusBar style="light" />
-            <AppRoutes />
+            <SignIn />
           </NavigationContainer>
         </ThemeProvider>
       </GestureHandlerRootView>
