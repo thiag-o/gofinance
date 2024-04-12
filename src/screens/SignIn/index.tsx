@@ -12,7 +12,9 @@ import {
   Title,
   SignInTitle,
   Footer,
+  FooterWrapper,
 } from "./styles";
+import { SignInSocialButton } from "../../components/SignInSocialButton";
 
 export function SignIn() {
   return (
@@ -28,7 +30,12 @@ export function SignIn() {
           Faça seu login com {"\n"} uma das contas abaixo
         </SignInTitle>
       </Header>
-      <Footer></Footer>
+      <Footer>
+        <FooterWrapper>
+          <SignInSocialButton title="Entrar com Google" svg={GoogleSvg} />
+          <SignInSocialButton title="Entrar com Apple" svg={AppleSvg} />
+        </FooterWrapper>
+      </Footer>
     </Container>
   );
 }
