@@ -17,6 +17,7 @@ import { Register } from "./src/screens/Register";
 import theme from "./src/global/styles/theme";
 import { AppRoutes } from "./src/routes/app.routes";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   const [fontsLoaded, fontsError] = useFonts({
@@ -36,6 +37,7 @@ export default function App() {
       <GestureHandlerRootView style={{ flex: 1 }}>
         <ThemeProvider theme={theme}>
           <NavigationContainer>
+            <StatusBar style="light" />
             <AppRoutes />
           </NavigationContainer>
         </ThemeProvider>
