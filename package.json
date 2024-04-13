@@ -15,10 +15,12 @@
     "@react-native-google-signin/google-signin": "^11.0.1",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
+    "@react-navigation/stack": "^6.3.29",
     "@types/react": "~18.2.45",
     "date-fns": "^3.6.0",
     "expo": "~50.0.14",
     "expo-app-loading": "^2.1.1",
+    "expo-apple-authentication": "~6.3.0",
     "expo-dev-client": "~3.3.11",
     "expo-font": "~11.10.3",
     "expo-splash-screen": "~0.26.4",
@@ -36,8 +38,7 @@
     "styled-components": "^6.1.8",
     "typescript": "^5.3.0",
     "victory-native": "^37.0.2",
-    "yup": "^1.4.0",
-    "expo-apple-authentication": "~6.3.0"
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
