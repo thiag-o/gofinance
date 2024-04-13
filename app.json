@@ -3,11 +3,10 @@
     "name": "gofinance",
     "slug": "gofinance",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "plugins": [
       "expo-font",
+      "expo-apple-authentication",
       "@react-native-google-signin/google-signin"
     ],
     "extra": {
@@ -17,6 +16,9 @@
     },
     "android": {
       "package": "com.gofinance"
+    },
+    "ios": {
+      "usesAppleSignIn": true
     }
   }
 }
