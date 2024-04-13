@@ -3,7 +3,20 @@
     "name": "gofinance",
     "slug": "gofinance",
     "version": "1.0.0",
-    "assetBundlePatterns": ["**/*"],
-    "plugins": ["expo-font"]
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      "expo-font",
+      "@react-native-google-signin/google-signin"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e29fb826-9c4c-467b-ac27-0b981a1d3670"
+      }
+    },
+    "android": {
+      "package": "com.gofinance"
+    }
   }
 }

@@ -3,5 +3,6 @@
     "strict": true
   },
 
+  "include": ["src/**.d.ts"],
   "extends": "expo/tsconfig.base"
 }

@@ -12,6 +12,7 @@
     "@expo-google-fonts/poppins": "^0.2.3",
     "@hookform/resolvers": "^3.3.4",
     "@react-native-async-storage/async-storage": "1.21.0",
+    "@react-native-google-signin/google-signin": "^11.0.1",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
     "@types/react": "~18.2.45",
@@ -35,7 +36,8 @@
     "styled-components": "^6.1.8",
     "typescript": "^5.3.0",
     "victory-native": "^37.0.2",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    "expo-apple-authentication": "~6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
