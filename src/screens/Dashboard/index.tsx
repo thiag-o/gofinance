@@ -27,6 +27,7 @@ import {
 } from "./styles";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useTheme } from "styled-components/native";
+import { useAuth } from "../../hooks/auth";
 
 export interface DataListProps extends TransactionCardProps {
   id: string;
@@ -68,6 +69,8 @@ export function Dashboard() {
   const [highLightData, setHighLightData] = useState<HighLightData>(
     {} as HighLightData
   );
+
+  const { signOut } = useAuth();
 
   const theme = useTheme();
 
@@ -182,7 +185,7 @@ export function Dashboard() {
                   <UserName>Thiago</UserName>
                 </User>
               </UserInfo>
-              <LogoutButton onPress={() => {}}>
+              <LogoutButton onPress={signOut}>
                 <Icon name="power" />
               </LogoutButton>
             </UserWrapper>
