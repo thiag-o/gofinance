@@ -70,7 +70,7 @@ export function Dashboard() {
     {} as HighLightData
   );
 
-  const { signOut } = useAuth();
+  const { signOut, user } = useAuth();
 
   const theme = useTheme();
 
@@ -177,12 +177,12 @@ export function Dashboard() {
               <UserInfo>
                 <Photo
                   source={{
-                    uri: "https://avatars.githubusercontent.com/u/77461960?v=4",
+                    uri: user.photo,
                   }}
                 />
                 <User>
                   <UserGreeting>Olá, </UserGreeting>
-                  <UserName>Thiago</UserName>
+                  <UserName>{user.name}</UserName>
                 </User>
               </UserInfo>
               <LogoutButton onPress={signOut}>

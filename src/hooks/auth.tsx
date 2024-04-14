@@ -42,11 +42,15 @@ function AuthProvider({ children }: AuthProviderProps) {
     try {
       const result = await GoogleSignin.signIn();
       if (result.user) {
+        const name = result.user.name!;
+        const photo =
+          result.user.photo ??
+          `https://ui-avatars.com/api/?name=${name}&lenght=1`;
         const userLogged = {
           id: String(result.user.id),
           email: result.user.email!,
-          name: result.user.name!,
-          photo: result.user.photo!,
+          name,
+          photo,
         };
 
         setUser(userLogged);
@@ -66,11 +70,13 @@ function AuthProvider({ children }: AuthProviderProps) {
         ],
       });
       if (credential) {
+        const name = credential.fullName!.givenName!;
+        const photo = `https://ui-avatars.com/api/?name=${name}&lenght=1`;
         const userLogged = {
           id: String(credential.user),
           email: credential.email!,
-          name: credential.fullName!.givenName!,
-          photo: undefined,
+          name,
+          photo,
         };
 
         setUser(userLogged);
