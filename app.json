@@ -3,6 +3,11 @@
     "name": "gofinance",
     "slug": "gofinance",
     "version": "1.0.0",
+    "icon": "./src/assets/images/icon.png",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "backgroundColor": "#FFFFFF"
+    },
     "assetBundlePatterns": ["**/*"],
     "plugins": [
       "expo-font",
@@ -15,6 +20,11 @@
       }
     },
     "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "icon": "/src/assets/images/icon.png",
       "package": "com.gofinance"
     },
     "ios": {
