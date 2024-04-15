@@ -36,7 +36,7 @@ Aqui o usuário encontra todos os tipos de transações efetuadas separadas por 
 
 <img src=".github/app.gif" alt="Resumo" width="350" />
 
-## Installation
+## Instalação
 
 Dependência: Node: 18.17.0
 
@@ -48,6 +48,6 @@ Para iniciar a aplicação basta rodar os comandos `npm install` e logo depois `
 
 [![My Skills](https://skillicons.dev/icons?i=react,ts)](https://skillicons.dev)
 
-## License
+## Licença
 
 [MIT](https://choosealicense.com/licenses/mit/)
