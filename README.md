@@ -12,17 +12,29 @@ O objetivo do aplicativo é proporcionar ao usuário o controle de suas despesas
 
 Logo após de instalar a aplicação o usuário é direcionado para a tela de login:
 
+<img src=".github/login.png" alt="Tela de login" width="350" />
+
 ### Dashboard
 
 Após o login o usuário será direcionado para a tela do dashboard onde haverá as suas transações e o resumo dessas:
+
+<img src=".github/dashboard.png" alt="Dashboard" width="350" />
 
 ### Cadastro de transação
 
 Na tela de cadastro de transação há campos principais para registrar a transação e a mapear corretamente de acordo com o tipo de transação e a categoria:
 
+<img src=".github/cadastro_transacao.png" alt="Cadastro de transacao" width="350" />
+
 ### Resumo
 
 Aqui o usuário encontra todos os tipos de transações efetuadas separadas por categorias e filtradas mensalmente:
+
+<img src=".github/resumo.png" alt="Resumo" width="350" />
+
+### App
+
+<img src=".github/app.gif" alt="Resumo" width="350" />
 
 ## Installation
 
