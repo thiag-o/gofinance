@@ -22,7 +22,7 @@ Após o login o usuário será direcionado para a tela do dashboard onde haverá
 
 ### Cadastro de transação
 
-Na tela de cadastro de transação há campos principais para registrar a transação e a mapear corretamente de acordo com o tipo de transação e a categoria:
+Na tela de cadastro de transação, existem campos principais para registrar a transação e mapeá-la corretamente de acordo com o tipo e a categoria:
 
 <img src=".github/cadastro_transacao.png" alt="Cadastro de transacao" width="350" />
 
