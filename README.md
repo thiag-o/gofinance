@@ -42,7 +42,7 @@ Dependência: Node: 18.17.0
 
 Para configurar as variáveis do projeto crie um arquivo `.env` na raíz do diretório do projeto com as variáveis `IOS_CLIENT_ID` e `WEB_CLIENT_ID` assim como mostra no arquivo `.env-template`. Os valores poderão ser gerados no https://console.cloud.google.com que serão utilizados para a funcionalidade de login do aplicativo.
 
-Para iniciar a aplicação basta rodar os comandos `npm  install` e logo depois `npm run android` ou `npm run ios` caso esteja usando IOS.
+Para iniciar a aplicação basta rodar os comandos `npm install` e logo depois `npm run android` ou `npm run ios` caso esteja usando IOS.
 
 ## Tecnologias
 
